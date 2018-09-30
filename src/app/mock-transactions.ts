@@ -3,9 +3,10 @@ import {Transaction} from './classes/Transaction';
 export const TRANSACTIONS: Transaction[] = [
   {
     id: 'transaction_1',
-    value: 100,
+    amount: 100,
     currency: 'RUB',
     from: 'Магазин',
+    fromCategory: 'shopping',
     description: 'Описание транзакции 1',
     date: Date().toString(),
     trType: 'income',
@@ -13,9 +14,10 @@ export const TRANSACTIONS: Transaction[] = [
   },
   {
     id: 'transaction_2',
-    value: 200,
+    amount: 200,
     currency: 'EUR',
     from: 'Банк',
+    fromCategory: 'bank',
     description: 'Описание транзакции 2',
     date: Date().toString(),
     trType: 'outcome',
