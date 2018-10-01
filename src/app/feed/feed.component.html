@@ -1,9 +1,3 @@
-<div class="feed">
-  <div class="feed__item">
-    <!-- <app-item-news></app-item-news> -->
-  </div>
-  <app-item-transaction></app-item-transaction>
-  <app-item-transaction></app-item-transaction>
-  <app-item-transaction></app-item-transaction>
-  <app-item-transaction></app-item-transaction>
+<div class="feed" *ngFor="let transaction of transactions">
+  <app-item-transaction [transaction]="transaction"></app-item-transaction>
 </div>

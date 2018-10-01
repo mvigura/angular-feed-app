@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {TRANSACTIONS} from '../../mock-transactions';
+import {Component, OnInit, Input} from '@angular/core';
+import {Transaction} from '../../classes/Transaction';
 
 @Component({
   selector: 'app-item-transaction',
@@ -7,10 +7,23 @@ import {TRANSACTIONS} from '../../mock-transactions';
   styleUrls: ['./item-transaction.component.less']
 })
 export class ItemTransactionComponent implements OnInit {
-  transaction = TRANSACTIONS[0];
-  transaction_2 = TRANSACTIONS[1];
+  @Input() transaction: Transaction;
 
   constructor() {}
 
   ngOnInit() {}
+
+  getIcon(fromCategory: string) {
+    console.log(fromCategory);
+    switch (fromCategory) {
+      case 'restaurants':
+        return 'icon-coffee';
+      case 'shopping':
+        return 'icon-shopping-cart';
+      case 'bank':
+        return 'icon-bank';
+      default:
+        return 'icon-credit-card-alt';
+    }
+  }
 }

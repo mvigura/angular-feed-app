@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {TRANSACTIONS} from '../mock-transactions';
 
 @Component({
   selector: 'app-feed',
@@ -6,10 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./feed.component.less']
 })
 export class FeedComponent implements OnInit {
+  transactions = TRANSACTIONS;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

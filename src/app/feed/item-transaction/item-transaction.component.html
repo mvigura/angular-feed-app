@@ -1,8 +1,8 @@
-<div class="item-transaction">
-  <app-icon icon="icon-coffee" class="item-transaction__icon"></app-icon>
-  <div class="item-transaction__desc">Starbucks</div>
+<div class="item-transaction" [class.item-transaction--outcome]="transaction.trType === 'outcome'">
+  <app-icon [icon]="getIcon(transaction.fromCategory)" class="item-transaction__icon"></app-icon>
+  <div class="item-transaction__desc">{{transaction.from}}</div>
   <div class="item-transaction__amount">
-    -100
+    {{transaction.amount}}
   </div>
   <app-icon icon="icon-rouble" class="item-transaction__currency-icon"></app-icon>
 </div>
