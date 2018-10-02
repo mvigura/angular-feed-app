@@ -1,13 +1,13 @@
 @import '../../colors.less';
 
 .item-transaction {
-  margin: 0 auto;
-  margin-bottom: 10px;
   display: flex;
-  align-items: center;
   max-width: 400px;
   min-height: 50px;
+  align-items: center;
   padding: 15px;
+  margin: 0 auto;
+  margin-bottom: 10px;
   background: @color-primary-1;
   border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -24,21 +24,38 @@
   &__icon {
     width: 30px;
     height: 30px;
-    margin-right: 15px;
     padding: 15px;
+    margin-right: 15px;
     background: @color-primary-0;
     border-radius: 50%;
   }
 
-  &__amount {
-    margin-left: auto;
+  &__side-info {
+    display: flex;
+    min-height: 50px;
+    flex-direction: column;
+    justify-content: space-around;
     margin-right: 0;
+    margin-left: auto;
+    font-size: 14px;
+    text-align: right;
+    vertical-align: middle;
+  }
+
+  &__amount {
+    margin-right: 0;
+    margin-left: auto;
   }
 
   &__currency-icon {
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     margin-right: 0;
+    vertical-align: middle;
+  }
+
+  &__date {
+    font-size: 12px;
   }
 
   &--outcome {

@@ -1,8 +1,14 @@
 <div class="item-transaction" [class.item-transaction--outcome]="transaction.trType === 'outcome'">
   <app-icon [icon]="getIcon(transaction.fromCategory)" class="item-transaction__icon"></app-icon>
   <div class="item-transaction__desc">{{transaction.from}}</div>
-  <div class="item-transaction__amount">
-    {{transaction.amount}}
+  <div class="item-transaction__side-info">
+    <div class="item-transaction__date">
+      {{transaction.date | date:'dd.LL HH:mm'}}
+    </div>
+    <div class="item-transaction__amount">
+      {{transaction.trType === 'outcome' ? '+' : ''}}
+      {{transaction.amount}}
+      <app-icon icon="icon-rouble" class="item-transaction__currency-icon"></app-icon>
+    </div>
   </div>
-  <app-icon icon="icon-rouble" class="item-transaction__currency-icon"></app-icon>
 </div>
