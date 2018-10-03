@@ -7,7 +7,7 @@ export const TRANSACTIONS: Transaction[] = [
     currency: 'USD',
     from: 'Starcups',
     fromCategory: 'restaurants',
-    description: 'Покупка',
+    description: 'Покупка в starcups',
     date: Date().toString(),
     trType: 'income',
     type: 'transaction'
@@ -18,7 +18,7 @@ export const TRANSACTIONS: Transaction[] = [
     currency: 'RUB',
     from: 'Банк',
     fromCategory: 'bank',
-    description: 'Начисление процентов',
+    description: 'Начисление процентов по вкладу',
     date: Date().toString(),
     trType: 'outcome',
     type: 'transaction'
@@ -29,7 +29,7 @@ export const TRANSACTIONS: Transaction[] = [
     currency: 'RUB',
     from: 'Восьмерочка',
     fromCategory: 'shopping',
-    description: 'Покупка',
+    description: 'Покупка в магазине восьмерочка',
     date: Date().toString(),
     trType: 'income',
     type: 'transaction'

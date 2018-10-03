@@ -14,7 +14,6 @@ export class ItemTransactionComponent implements OnInit {
   ngOnInit() {}
 
   getIcon(fromCategory: string) {
-    console.log(fromCategory);
     switch (fromCategory) {
       case 'restaurants':
         return 'icon-coffee';
@@ -24,6 +23,19 @@ export class ItemTransactionComponent implements OnInit {
         return 'icon-bank';
       default:
         return 'icon-credit-card-alt';
+    }
+  }
+
+  getCurrency(currency: string) {
+    switch (currency) {
+      case 'RUB':
+        return 'icon-rouble';
+      case 'USD':
+        return 'icon-dollar';
+      case 'EUR':
+        return 'icon-eur';
+      default:
+        return 'icon-money';
     }
   }
 }

@@ -1,14 +1,23 @@
-<div class="item-transaction" [class.item-transaction--outcome]="transaction.trType === 'outcome'">
-  <app-icon [icon]="getIcon(transaction.fromCategory)" class="item-transaction__icon"></app-icon>
-  <div class="item-transaction__desc">{{transaction.from}}</div>
-  <div class="item-transaction__side-info">
-    <div class="item-transaction__date">
-      {{transaction.date | date:'dd.LL HH:mm'}}
+<div class="item-transaction">
+  <div class="item-transaction-head" [class.item-transaction-head--outcome]="transaction.trType === 'outcome'">
+    <app-icon [icon]="getIcon(transaction.fromCategory)" class="item-transaction-head__icon"></app-icon>
+    <div class="item-transaction-head__desc">{{transaction.from}}</div>
+    <div class="item-transaction-head__side-info">
+      <div class="item-transaction-head__date">
+        {{transaction.date | date:'dd.LL HH:mm'}}
+      </div>
+      <div class="item-transaction-head__amount">
+        {{transaction.trType === 'outcome' ? '+' : ''}}
+        {{transaction.amount}}
+        <app-icon [icon]="getCurrency(transaction.currency)" class="item-transaction-head__currency-icon"></app-icon>
+      </div>
     </div>
-    <div class="item-transaction__amount">
-      {{transaction.trType === 'outcome' ? '+' : ''}}
-      {{transaction.amount}}
-      <app-icon icon="icon-rouble" class="item-transaction__currency-icon"></app-icon>
+  </div>
+  <div class="item-transaction-content" [class.item-transaction-content--outcome]="transaction.trType === 'outcome'">
+    <div>Категория: {{transaction.fromCategory}}</div>
+    <div>Описание: {{transaction.description}}</div>
+    <div class="item-transaction-content__controls-right">
+      <button class="item-button">Удалить</button>
     </div>
   </div>
 </div>

@@ -1,3 +1,3 @@
-<div class="feed" *ngFor="let transaction of transactions">
-  <app-item-transaction [transaction]="transaction"></app-item-transaction>
+<div class="feed">
+  <app-item-transaction *ngFor="let transaction of transactions" [transaction]="transaction"></app-item-transaction>
 </div>
