@@ -1,3 +1,4 @@
 <div class="feed">
-  <app-item-transaction *ngFor="let transaction of transactions" [transaction]="transaction"></app-item-transaction>
+  <app-item-transaction *ngFor="let transaction of transactions" [transaction]="transaction" [selected]="transaction.id === selectedTransaction"
+    (click)="selectedTransaction = transaction.id"></app-item-transaction>
 </div>

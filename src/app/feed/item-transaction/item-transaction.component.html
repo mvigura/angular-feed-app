@@ -13,9 +13,9 @@
       </div>
     </div>
   </div>
-  <div class="item-transaction-content" [class.item-transaction-content--outcome]="transaction.trType === 'outcome'">
-    <div>Категория: {{transaction.fromCategory}}</div>
-    <div>Описание: {{transaction.description}}</div>
+  <div class="item-transaction-content" [class.item-transaction-content--outcome]="transaction.trType === 'outcome'"
+    *ngIf="selected">
+    <div class="item-transaction-content__desc">{{transaction.description}}</div>
     <div class="item-transaction-content__controls-right">
       <button class="item-button">Удалить</button>
     </div>

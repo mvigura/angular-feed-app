@@ -8,6 +8,7 @@ import {Transaction} from '../../classes/Transaction';
 })
 export class ItemTransactionComponent implements OnInit {
   @Input() transaction: Transaction;
+  @Input() selected: boolean;
 
   constructor() {}
 
