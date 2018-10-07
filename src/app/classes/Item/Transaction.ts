@@ -1,6 +1,6 @@
-export class Transaction {
-  id: string;
-  date: string;
+import {Item} from './index';
+
+export class Transaction extends Item {
   amount: number;
   currency: string;
   from: string;

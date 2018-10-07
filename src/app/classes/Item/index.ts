@@ -1,4 +1,4 @@
 export class Item {
-  id: number;
-  date: Date;
+  id: string;
+  date: string;
 }

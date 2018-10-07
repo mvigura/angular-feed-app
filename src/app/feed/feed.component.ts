@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {TRANSACTIONS} from '../mock-transactions';
-import {NEWS} from '../mock-news';
+import {Item} from '../classes/Item';
+import {ItemService} from '../item.service';
 
 @Component({
   selector: 'app-feed',
@@ -8,10 +8,16 @@ import {NEWS} from '../mock-news';
   styleUrls: ['./feed.component.less']
 })
 export class FeedComponent implements OnInit {
-  transactions = TRANSACTIONS;
-  news = NEWS;
+  items: Item[];
   selectedTransaction = null;
-  constructor() {}
 
-  ngOnInit() {}
+  constructor(private itemService: ItemService) {}
+
+  ngOnInit() {
+    this.getItems();
+  }
+
+  getItems(): void {
+    this.itemService.getItems().subscribe(items => (this.items = items));
+  }
 }

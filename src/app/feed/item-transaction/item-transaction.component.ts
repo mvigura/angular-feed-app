@@ -1,5 +1,5 @@
 import {Component, OnInit, Input} from '@angular/core';
-import {Transaction} from '../../classes/Transaction';
+import {Transaction} from '../../classes/Item/Transaction';
 
 @Component({
   selector: 'app-item-transaction',

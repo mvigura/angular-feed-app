@@ -1,4 +1,4 @@
-import {News} from './classes/News';
+import {News} from './classes/Item/News';
 
 export const NEWS: News[] = [
   {
