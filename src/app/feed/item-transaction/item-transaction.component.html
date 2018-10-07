@@ -17,7 +17,7 @@
     *ngIf="selected">
     <div class="item-transaction-content__desc">{{transaction.description}}</div>
     <div class="item-transaction-content__controls-right">
-      <button class="item-button">Удалить</button>
+      <app-button label="Удалить" [appearance]="getButtonType(transaction.trType)"></app-button>
     </div>
   </div>
 </div>

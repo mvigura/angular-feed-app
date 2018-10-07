@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {NEWS} from '../../mock-news';
+import {Component, OnInit, Input} from '@angular/core';
+import {News} from '../../classes/News';
 
 @Component({
   selector: 'app-item-news',
@@ -7,7 +7,8 @@ import {NEWS} from '../../mock-news';
   styleUrls: ['./item-news.component.less']
 })
 export class ItemNewsComponent implements OnInit {
-  news = NEWS[0];
+  @Input() news: News;
+
   constructor() {}
 
   ngOnInit() {}

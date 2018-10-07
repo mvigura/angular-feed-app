@@ -39,4 +39,14 @@ export class ItemTransactionComponent implements OnInit {
         return 'icon-money';
     }
   }
+  getButtonType(trType: string) {
+    switch (trType) {
+      case 'income':
+        return 'flatten-primary';
+      case 'outcome':
+        return 'flatten-secondary-2';
+      default:
+        return 'flatten-primary';
+    }
+  }
 }
