@@ -8,6 +8,7 @@ import {News} from '../../classes/Item/News';
 })
 export class ItemNewsComponent implements OnInit {
   @Input() news: News;
+  @Input() selected: boolean;
 
   constructor() {}
 

@@ -1,6 +1,6 @@
 import {Transaction} from './classes/Item/Transaction';
 
-export const TRANSACTIONS: Transaction[] = [
+const transactions: Transaction[] = [
   {
     id: 'transaction_1',
     amount: 139.99,
@@ -35,3 +35,18 @@ export const TRANSACTIONS: Transaction[] = [
     type: 'transaction'
   }
 ];
+
+export const TRANSACTIONS: Transaction[] = transactions.map(
+  tr =>
+    new Transaction(
+      tr.id,
+      tr.date,
+      tr.amount,
+      tr.currency,
+      tr.from,
+      tr.fromCategory,
+      tr.description,
+      tr.trType,
+      tr.type
+    )
+);

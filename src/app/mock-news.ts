@@ -1,6 +1,6 @@
 import {News} from './classes/Item/News';
 
-export const NEWS: News[] = [
+const news: News[] = [
   {
     id: 'news_1',
     title: 'Евро корректируется после шести дней падения',
@@ -20,3 +20,7 @@ export const NEWS: News[] = [
     viewed: false
   }
 ];
+
+export const NEWS: News[] = news.map(
+  ns => new News(ns.id, ns.date, ns.title, ns.content, ns.viewed, ns.type)
+);

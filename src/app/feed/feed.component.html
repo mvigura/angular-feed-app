@@ -1,5 +1,7 @@
 <div class="feed">
-  <app-item-transaction *ngFor="let transaction of items.slice(0,2)" [transaction]="transaction" [selected]="transaction.id === selectedTransaction"
-    (click)="selectedTransaction = transaction.id"></app-item-transaction>
-  <!-- <app-item-news *ngFor="let newsItem of news" [news]="newsItem"></app-item-news> -->
+  <ng-container *ngFor="let item of items">
+    <app-item-transaction *ngIf="isTransaction(item)" [transaction]="item" [selected]="item.id === selectedItem"
+      (click)="selectedItem = item.id"></app-item-transaction>
+    <app-item-news *ngIf="isNews(item)" [news]="item" [selected]="item.id === selectedItem" (click)="selectedItem = item.id"></app-item-news>
+  </ng-container>
 </div>
