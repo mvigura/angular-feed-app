@@ -1,0 +1,27 @@
+.app-modal {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+
+  &-body {
+    padding: 20px;
+    margin: 40px;
+    background: #fff;
+    opacity: 1;
+  }
+
+  &-background {
+    position: fixed;
+    z-index: 900;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.75;
+  }
+}

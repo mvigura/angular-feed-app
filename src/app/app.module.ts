@@ -8,7 +8,8 @@ import {ItemTransactionComponent} from './feed/item-transaction/item-transaction
 import {FeedComponent} from './feed/feed.component';
 import {IconComponent} from './components/icon/icon.component';
 import {ButtonComponent} from './components/button/button.component';
-import { HeaderComponent } from './header/header.component';
+import {HeaderComponent} from './header/header.component';
+import {ModalComponent} from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HeaderComponent } from './header/header.component';
     FeedComponent,
     IconComponent,
     ButtonComponent,
-    HeaderComponent
+    HeaderComponent,
+    ModalComponent
   ],
   imports: [BrowserModule, EllipsisModule],
   providers: [],
