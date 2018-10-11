@@ -9,6 +9,7 @@ import {ModalService} from '../../modal.service';
 export class ModalComponent implements OnInit, OnDestroy {
   @Input() id: string;
   private element: any;
+  private isActive: boolean;
 
   constructor(private modalService: ModalService, el: ElementRef) {
     this.element = el.nativeElement;
@@ -28,7 +29,7 @@ export class ModalComponent implements OnInit, OnDestroy {
 
     // close modal on background click
     this.element.addEventListener('click', function(e: any) {
-      if (e.target.className === 'jw-modal') {
+      if (e.target.className === 'app-modal') {
         modal.close();
       }
     });
@@ -45,13 +46,16 @@ export class ModalComponent implements OnInit, OnDestroy {
 
   // open modal
   open(): void {
+    console.log(this.element);
+    this.isActive = true;
     this.element.style.display = 'block';
-    document.body.classList.add('jw-modal-open');
+    // document.body.classList.add('app-modal-open');
   }
 
   // close modal
   close(): void {
+    this.isActive = false;
     this.element.style.display = 'none';
-    document.body.classList.remove('jw-modal-open');
+    // document.body.classList.remove('app-modal-open');
   }
 }

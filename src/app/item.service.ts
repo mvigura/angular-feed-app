@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Item} from './classes/Item';
+import {Item} from './_classes';
 
 import {TRANSACTIONS} from './mock-transactions';
 import {NEWS} from './mock-news';

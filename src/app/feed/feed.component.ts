@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Item} from '../classes/Item';
-import {Transaction} from '../classes/Item/Transaction';
-import {News} from '../classes/Item/News';
+import {Item, News, Transaction} from '../_classes';
 
 import {ItemService} from '../item.service';
 
