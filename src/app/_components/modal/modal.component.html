@@ -1,6 +1,9 @@
 <div class="app-modal" [class.app-modal--active]="isActive">
+  <div class="app-modal-header">
+    <div class="app-modal-header__title">{{title}}</div>
+  </div>
   <div class="app-modal-body">
     <ng-content></ng-content>
   </div>
 </div>
-<div class="app-modal-background"></div>
+<div class="app-modal-overlay" [class.app-modal-overlay--active]="isActive"></div>

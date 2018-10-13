@@ -8,6 +8,7 @@ import {ModalService} from '../../modal.service';
 })
 export class ModalComponent implements OnInit, OnDestroy {
   @Input() id: string;
+  @Input() title: string;
   private element: any;
   private isActive: boolean;
 
@@ -23,13 +24,13 @@ export class ModalComponent implements OnInit, OnDestroy {
       console.error('modal must have an id');
       return;
     }
-
+    this.element.style.display = 'none';
     // move element to bottom of page (just before </body>) so it can be displayed above everything else
     document.body.appendChild(this.element);
 
     // close modal on background click
     this.element.addEventListener('click', function(e: any) {
-      if (e.target.className === 'app-modal') {
+      if (e.target.className === 'app-modal-overlay app-modal-overlay--active') {
         modal.close();
       }
     });
@@ -47,15 +48,17 @@ export class ModalComponent implements OnInit, OnDestroy {
   // open modal
   open(): void {
     console.log(this.element);
-    this.isActive = true;
     this.element.style.display = 'block';
-    // document.body.classList.add('app-modal-open');
+    setTimeout(() => {
+      this.isActive = true;
+    }, 20);
   }
 
   // close modal
   close(): void {
-    this.isActive = false;
     this.element.style.display = 'none';
-    // document.body.classList.remove('app-modal-open');
+    setTimeout(() => {
+      this.isActive = false;
+    }, 20);
   }
 }
