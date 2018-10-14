@@ -12,6 +12,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {}
 
   openAddModal() {
-    this.modalService.open('custom-modal-1');
+    this.modalService.open('add-event');
   }
 }

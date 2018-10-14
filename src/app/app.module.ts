@@ -9,6 +9,12 @@ import {ItemTransactionComponent} from './feed/item-transaction/item-transaction
 import {FeedComponent} from './feed/feed.component';
 import {HeaderComponent} from './header/header.component';
 import {AddEventModalComponent} from './modals/add-event-modal/add-event-modal.component';
+import {AddTransactionFormComponent} from './forms/add-transaction-form/add-transaction-form.component';
+import {AddNewsFormComponent} from './forms/add-news-form/add-news-form.component';
+import {FormsModule} from '@angular/forms';
+import {InputComponent} from './_components/input/input.component';
+import {SelectComponent} from './_components/select/select.component';
+import {FormGroupComponent} from './_components/form-group/form-group.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +26,14 @@ import {AddEventModalComponent} from './modals/add-event-modal/add-event-modal.c
     ButtonComponent,
     HeaderComponent,
     ModalComponent,
-    AddEventModalComponent
+    AddEventModalComponent,
+    AddTransactionFormComponent,
+    AddNewsFormComponent,
+    InputComponent,
+    SelectComponent,
+    FormGroupComponent
   ],
-  imports: [BrowserModule, EllipsisModule],
+  imports: [BrowserModule, EllipsisModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

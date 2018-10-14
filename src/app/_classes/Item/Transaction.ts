@@ -7,7 +7,6 @@ export class Transaction extends Item {
   fromCategory: string;
   description: string;
   trType: string;
-  type: string;
   constructor(
     id: string,
     date: string,
@@ -16,8 +15,7 @@ export class Transaction extends Item {
     from: string,
     fromCategory: string,
     description: string,
-    trType: string,
-    type: string
+    trType: string
   ) {
     super(id, date);
     this.amount = amount;
@@ -26,6 +24,5 @@ export class Transaction extends Item {
     this.fromCategory = fromCategory;
     this.description = description;
     this.trType = trType;
-    this.type = type;
   }
 }

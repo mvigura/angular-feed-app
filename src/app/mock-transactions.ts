@@ -9,8 +9,7 @@ const transactions: Transaction[] = [
     fromCategory: 'restaurants',
     description: 'Покупка в starcups',
     date: Date().toString(),
-    trType: 'income',
-    type: 'transaction'
+    trType: 'income'
   },
   {
     id: 'transaction_2',
@@ -20,8 +19,7 @@ const transactions: Transaction[] = [
     fromCategory: 'bank',
     description: 'Начисление процентов по вкладу',
     date: Date().toString(),
-    trType: 'outcome',
-    type: 'transaction'
+    trType: 'outcome'
   },
   {
     id: 'transaction_3',
@@ -31,8 +29,7 @@ const transactions: Transaction[] = [
     fromCategory: 'shopping',
     description: 'Покупка в магазине восьмерочка',
     date: Date().toString(),
-    trType: 'income',
-    type: 'transaction'
+    trType: 'income'
   }
 ];
 
@@ -46,7 +43,6 @@ export const TRANSACTIONS: Transaction[] = transactions.map(
       tr.from,
       tr.fromCategory,
       tr.description,
-      tr.trType,
-      tr.type
+      tr.trType
     )
 );
