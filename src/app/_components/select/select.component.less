@@ -1,0 +1,64 @@
+@import '../../../styles/colors.less';
+@import '../../../styles/variables.less';
+
+.form-select {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding: @baseOffset2x @baseOffset3x;
+  border: 1px solid @color-primary-0;
+  border-radius: @smallGlobalRadius;
+  font-size: 15px;
+  outline: none;
+
+  &__input {
+    display: flex;
+    width: 100%;
+
+    &-title {
+      overflow: hidden;
+      width: 100%;
+      margin-right: 10px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &-icon {
+      width: 12px;
+      height: 10px;
+      margin-left: auto;
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    right: -1px;
+    left: -1px;
+    overflow: hidden;
+    max-height: 144px;
+    border: 1px solid @color-primary-0;
+    border-top: none;
+    margin-top: @baseOffset;
+    background-color: #fff;
+    border-bottom-left-radius: @smallGlobalRadius;
+    border-bottom-right-radius: @smallGlobalRadius;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    overflow-y: auto;
+
+    li {
+      padding: @baseOffset2x @baseOffset3x;
+      margin-bottom: @baseOffset;
+      list-style: none;
+
+      &:hover {
+        background: @color-primary-0;
+        color: @color-primary-1;
+        cursor: pointer;
+      }
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

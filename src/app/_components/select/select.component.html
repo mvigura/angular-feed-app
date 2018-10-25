@@ -1,3 +1,11 @@
-<p>
-  select works!
-</p>
+<div class="form-select" (click)="isActive = !isActive">
+  <div class="form-select__input">
+    <div class="form-select__input-title">{{selectedOption.title}}</div>
+    <app-icon [icon]="getSelectIcon(isActive)" class="form-select__input-icon"></app-icon>
+  </div>
+  <ul class="form-select__dropdown" *ngIf="isActive">
+    <li *ngFor="let option of getFilteredOptions(options)" (click)="writeValue(option)">
+      <span>{{option.title}}</span>
+    </li>
+  </ul>
+</div>

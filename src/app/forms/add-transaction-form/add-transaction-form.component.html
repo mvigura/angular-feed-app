@@ -1,10 +1,16 @@
-<form class="add-event">
-  <app-form-group label="Сумма">
-    <app-input></app-input>
-  </app-form-group>
-  <app-form-group label="Валюта">
-    <app-input></app-input>
-  </app-form-group>
+<form class="add-transaction-form" [formGroup]="addTransactionForm" (ngSubmit)="onSubmit(addTransactionForm.value)">
+  <div class="add-transaction-form__price-row">
+    <div class="add-transaction-form__price-row__amount">
+      <app-form-group label="Сумма">
+        <app-input type="number" formControlName="amount"></app-input>
+      </app-form-group>
+    </div>
+    <div class="add-transaction-form__price-row__currency">
+      <app-form-group label="Валюта">
+        <app-select formControlName="currency" [options]="currencyOptions"></app-select>
+      </app-form-group>
+    </div>
+  </div>
   <app-form-group label="Отправитель">
     <app-input></app-input>
   </app-form-group>
@@ -14,4 +20,5 @@
   <app-form-group label="Описание">
     <app-input></app-input>
   </app-form-group>
+  <button type="submit">Submit</button>
 </form>
