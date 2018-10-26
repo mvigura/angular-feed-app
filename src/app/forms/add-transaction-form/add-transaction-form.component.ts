@@ -18,8 +18,19 @@ export class AddTransactionFormComponent implements OnInit {
     {title: 'USD', value: 'USD'}
   ];
 
+  trTypeOptions: object[] = [
+    {title: 'Исходящая', value: 'outcome'},
+    {title: 'Входящая', value: 'income'}
+  ];
+
+  fromCategoryOptions: object[] = [
+    {title: 'Рестораны', value: 'restaurants'},
+    {title: 'Банк', value: 'bank'},
+    {title: 'Магазины', value: 'shopping'}
+  ];
+
   addTransactionForm = this.fb.group({
-    amount: null,
+    amount: 300,
     currency: 'RUB',
     from: '',
     fromCategory: 'bank',

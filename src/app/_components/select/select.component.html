@@ -1,4 +1,4 @@
-<div class="form-select" (click)="isActive = !isActive">
+<div class="form-select" (click)="isActive = !isActive" (clickOutside)="onClickedOutside($event)">
   <div class="form-select__input">
     <div class="form-select__input-title">{{selectedOption.title}}</div>
     <app-icon [icon]="getSelectIcon(isActive)" class="form-select__input-icon"></app-icon>

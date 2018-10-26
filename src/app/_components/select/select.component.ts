@@ -57,4 +57,8 @@ export class SelectComponent implements ControlValueAccessor {
 
   getFilteredOptions = (options: Option[]) =>
     options.filter(option => option.value !== this.selectedOption.value);
+
+  onClickedOutside(): void {
+    this.isActive = false;
+  }
 }

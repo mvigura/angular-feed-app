@@ -1,6 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {EllipsisModule} from '@thisissoon/angular-ellipsis';
+import {ClickOutsideModule} from 'ng-click-outside';
 
 import {AppComponent} from './app.component';
 import {IconComponent, ButtonComponent, ModalComponent} from './_components';
@@ -33,7 +34,7 @@ import {FormGroupComponent} from './_components/form-group/form-group.component'
     SelectComponent,
     FormGroupComponent
   ],
-  imports: [BrowserModule, EllipsisModule, FormsModule, ReactiveFormsModule],
+  imports: [BrowserModule, EllipsisModule, FormsModule, ReactiveFormsModule, ClickOutsideModule],
   providers: [],
   bootstrap: [AppComponent]
 })
