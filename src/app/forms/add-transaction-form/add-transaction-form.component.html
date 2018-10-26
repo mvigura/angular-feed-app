@@ -1,4 +1,10 @@
 <form class="add-transaction-form" [formGroup]="addTransactionForm" (ngSubmit)="onSubmit(addTransactionForm.value)">
+  <app-form-group label="Тип транзакции">
+    <app-input formControlName="trType"></app-input>
+  </app-form-group>
+  <app-form-group label="Отправитель" >
+    <app-input formControlName="from"></app-input>
+  </app-form-group>
   <div class="add-transaction-form__price-row">
     <div class="add-transaction-form__price-row__amount">
       <app-form-group label="Сумма">
@@ -11,14 +17,8 @@
       </app-form-group>
     </div>
   </div>
-  <app-form-group label="Отправитель">
-    <app-input></app-input>
+  <app-form-group label="Описание" >
+    <app-input formControlName="description"></app-input>
   </app-form-group>
-  <app-form-group label="Категория транзакции">
-    <app-input></app-input>
-  </app-form-group>
-  <app-form-group label="Описание">
-    <app-input></app-input>
-  </app-form-group>
-  <button type="submit">Submit</button>
+  <app-button type="submit" label="Добавить событие">Submit</app-button>
 </form>

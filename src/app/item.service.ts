@@ -1,8 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Item} from './_classes';
 
-import {TRANSACTIONS} from './mock-transactions';
-import {NEWS} from './mock-news';
+import {TRANSACTIONS, NEWS} from './_mocks';
 import {Observable, of} from 'rxjs';
 
 @Injectable({

@@ -1,4 +1,4 @@
-import {Transaction} from './_classes';
+import {Transaction} from '../_classes';
 
 const transactions: Transaction[] = [
   {

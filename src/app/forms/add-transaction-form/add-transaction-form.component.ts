@@ -12,17 +12,6 @@ export class AddTransactionFormComponent implements OnInit {
 
   ngOnInit() {}
 
-  transaction = new Transaction(
-    'transaction_1000',
-    Date(),
-    null,
-    '',
-    'ddd',
-    'Restaurants',
-    'Бизнес-ланч',
-    'income'
-  );
-
   currencyOptions: object[] = [
     {title: 'RUB', value: 'RUB'},
     {title: 'EUR', value: 'EUR'},
@@ -31,7 +20,11 @@ export class AddTransactionFormComponent implements OnInit {
 
   addTransactionForm = this.fb.group({
     amount: null,
-    currency: 'RUB'
+    currency: 'RUB',
+    from: '',
+    fromCategory: 'bank',
+    description: '',
+    trType: 'outcome'
   });
 
   onSubmit() {
