@@ -11,18 +11,28 @@
     background-color: @color-complement-2;
     border-color: @color-complement-1;
     color: @color-complement-1;
+    cursor: pointer;
     font-weight: bold;
   }
-}
 
-.app-button-flatten-primary {
-  border: 1px solid @color-primary-1;
-  background-color: transparent;
-  color: @color-primary-1;
-}
+  &-flatten-primary {
+    border: 1px solid @color-primary-1;
+    background-color: transparent;
+    color: @color-primary-1;
+  }
 
-.app-button-flatten-secondary-2 {
-  border: 1px solid @color-secondary-2-1;
-  background-color: transparent;
-  color: @color-secondary-2-1;
+  &-secondary-2 {
+    border: 1px solid @color-secondary-2-1;
+    background-color: transparent;
+    color: @color-secondary-2-1;
+  }
+
+  &-icon {
+    padding: @baseOffset;
+    border: none;
+
+    &:hover {
+      border-radius: 50%;
+    }
+  }
 }

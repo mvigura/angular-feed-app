@@ -29,11 +29,13 @@ export class AddTransactionFormComponent implements OnInit {
     {title: 'Магазины', value: 'shopping'}
   ];
 
+  getSideLabel = (trType: string) => (trType === 'outcome' ? 'Получатель' : 'Отправитель');
+
   addTransactionForm = this.fb.group({
-    amount: 300,
+    amount: 0,
     currency: 'RUB',
     from: '',
-    fromCategory: 'bank',
+    fromCategory: '',
     description: '',
     trType: 'outcome'
   });

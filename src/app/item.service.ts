@@ -10,8 +10,10 @@ import {Observable, of} from 'rxjs';
 export class ItemService {
   constructor() {}
 
+  items: Item[] = [];
+
   getItems(): Observable<Item[]> {
-    let items: Item[] = [...TRANSACTIONS, ...NEWS];
-    return of(items);
+    this.items = [...TRANSACTIONS, ...NEWS];
+    return of(this.items);
   }
 }

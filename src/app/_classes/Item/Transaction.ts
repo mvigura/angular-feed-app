@@ -3,8 +3,8 @@ import {Item} from './index';
 export class Transaction extends Item {
   amount: number;
   currency: string;
-  from: string;
-  fromCategory: string;
+  side: string;
+  sideCategory: string;
   description: string;
   trType: string;
   constructor(
@@ -12,16 +12,16 @@ export class Transaction extends Item {
     date: string,
     amount: number,
     currency: string,
-    from: string,
-    fromCategory: string,
+    side: string,
+    sideCategory: string,
     description: string,
     trType: string
   ) {
     super(id, date);
     this.amount = amount;
     this.currency = currency;
-    this.from = from;
-    this.fromCategory = fromCategory;
+    this.side = side;
+    this.sideCategory = sideCategory;
     this.description = description;
     this.trType = trType;
   }

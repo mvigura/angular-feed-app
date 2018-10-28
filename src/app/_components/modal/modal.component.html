@@ -1,9 +1,12 @@
-<div class="app-modal" [class.app-modal--active]="isActive">
+<div class="app-modal">
   <div class="app-modal-header">
     <div class="app-modal-header__title">{{title}}</div>
+    <app-button class="app-modal-header__control-close" appearance="icon">
+      <app-icon class="app-modal-header__control-close__icon" icon="icon-close"></app-icon>
+    </app-button>
   </div>
   <div class="app-modal-body">
     <ng-content></ng-content>
   </div>
 </div>
-<div class="app-modal-overlay" [class.app-modal-overlay--active]="isActive"></div>
+<div class="app-modal-overlay"></div>

@@ -1,10 +1,16 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {EllipsisModule} from '@thisissoon/angular-ellipsis';
-import {ClickOutsideModule} from 'ng-click-outside';
 
 import {AppComponent} from './app.component';
-import {IconComponent, ButtonComponent, ModalComponent} from './_components';
+import {
+  IconComponent,
+  ButtonComponent,
+  ModalComponent,
+  InputComponent,
+  SelectComponent,
+  FormGroupComponent
+} from './_components';
 import {ItemNewsComponent} from './feed/item-news/item-news.component';
 import {ItemTransactionComponent} from './feed/item-transaction/item-transaction.component';
 import {FeedComponent} from './feed/feed.component';
@@ -13,9 +19,6 @@ import {AddEventModalComponent} from './modals/add-event-modal/add-event-modal.c
 import {AddTransactionFormComponent} from './forms/add-transaction-form/add-transaction-form.component';
 import {AddNewsFormComponent} from './forms/add-news-form/add-news-form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {InputComponent} from './_components/input/input.component';
-import {SelectComponent} from './_components/select/select.component';
-import {FormGroupComponent} from './_components/form-group/form-group.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,7 @@ import {FormGroupComponent} from './_components/form-group/form-group.component'
     SelectComponent,
     FormGroupComponent
   ],
-  imports: [BrowserModule, EllipsisModule, FormsModule, ReactiveFormsModule, ClickOutsideModule],
+  imports: [BrowserModule, EllipsisModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

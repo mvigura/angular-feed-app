@@ -5,8 +5,8 @@ const transactions: Transaction[] = [
     id: 'transaction_1',
     amount: 139.99,
     currency: 'USD',
-    from: 'Starcups',
-    fromCategory: 'restaurants',
+    side: 'Starcups',
+    sideCategory: 'restaurants',
     description: 'Покупка в starcups',
     date: Date().toString(),
     trType: 'income'
@@ -15,8 +15,8 @@ const transactions: Transaction[] = [
     id: 'transaction_2',
     amount: 134.44,
     currency: 'RUB',
-    from: 'Банк',
-    fromCategory: 'bank',
+    side: 'Банк',
+    sideCategory: 'bank',
     description: 'Начисление процентов по вкладу',
     date: Date().toString(),
     trType: 'outcome'
@@ -25,8 +25,8 @@ const transactions: Transaction[] = [
     id: 'transaction_3',
     amount: 273.67,
     currency: 'RUB',
-    from: 'Восьмерочка',
-    fromCategory: 'shopping',
+    side: 'Восьмерочка',
+    sideCategory: 'shopping',
     description: 'Покупка в магазине восьмерочка',
     date: Date().toString(),
     trType: 'income'
@@ -40,8 +40,8 @@ export const TRANSACTIONS: Transaction[] = transactions.map(
       tr.date,
       tr.amount,
       tr.currency,
-      tr.from,
-      tr.fromCategory,
+      tr.side,
+      tr.sideCategory,
       tr.description,
       tr.trType
     )

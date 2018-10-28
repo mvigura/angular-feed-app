@@ -2,10 +2,10 @@
   <app-form-group label="Тип транзакции">
     <app-select formControlName="trType" [options]="trTypeOptions"></app-select>
   </app-form-group>
-  <app-form-group label="Отправитель">
+  <app-form-group [label]="getSideLabel(addTransactionForm.value.trType)">
     <app-input formControlName="from"></app-input>
   </app-form-group>
-  <app-form-group label="Тип отправителя">
+  <app-form-group label="Категория">
     <app-select formControlName="fromCategory" [options]="fromCategoryOptions"></app-select>
   </app-form-group>
   <div class="add-transaction-form__price-row">
@@ -23,5 +23,5 @@
   <app-form-group label="Описание">
     <app-input formControlName="description"></app-input>
   </app-form-group>
-  <app-button type="submit" label="Добавить событие">Submit</app-button>
+  <app-button class="add-transaction-form__control" type="submit">Добавить событие</app-button>
 </form>

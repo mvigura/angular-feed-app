@@ -14,8 +14,8 @@ export class ItemTransactionComponent implements OnInit {
 
   ngOnInit() {}
 
-  getIcon(fromCategory: string) {
-    switch (fromCategory) {
+  getIcon(sideCategory: string) {
+    switch (sideCategory) {
       case 'restaurants':
         return 'icon-coffee';
       case 'shopping':

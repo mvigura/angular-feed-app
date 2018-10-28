@@ -1,7 +1,7 @@
 <div class="item-transaction">
   <div class="item-transaction-head" [class.item-transaction-head--outcome]="transaction.trType === 'outcome'">
-    <app-icon [icon]="getIcon(transaction.fromCategory)" class="item-transaction-head__icon"></app-icon>
-    <div class="item-transaction-head__desc">{{transaction.from}}</div>
+    <app-icon [icon]="getIcon(transaction.sideCategory)" class="item-transaction-head__icon"></app-icon>
+    <div class="item-transaction-head__desc">{{transaction.side}}</div>
     <div class="item-transaction-head__side-info">
       <div class="item-transaction-head__date">
         {{transaction.date | date:'dd.LL HH:mm'}}
@@ -17,7 +17,7 @@
     *ngIf="selected">
     <div class="item-transaction-content__desc">{{transaction.description}}</div>
     <div class="item-transaction-content__controls-right">
-      <app-button label="Удалить" [appearance]="getButtonType(transaction.trType)"></app-button>
+      <app-button [appearance]="getButtonType(transaction.trType)">Удалить</app-button>
     </div>
   </div>
 </div>
