@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder} from '@angular/forms';
 import {Transaction} from '../../_classes';
+import {ModalService} from 'src/app/modal.service';
+import {ItemService} from 'src/app/item.service';
 
 @Component({
   selector: 'app-add-transaction-form',
@@ -8,7 +10,11 @@ import {Transaction} from '../../_classes';
   styleUrls: ['./add-transaction-form.component.less']
 })
 export class AddTransactionFormComponent implements OnInit {
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private modalService: ModalService,
+    private itemService: ItemService
+  ) {}
 
   ngOnInit() {}
 
@@ -23,7 +29,7 @@ export class AddTransactionFormComponent implements OnInit {
     {title: 'Входящая', value: 'income'}
   ];
 
-  fromCategoryOptions: object[] = [
+  sideCategoryOptions: object[] = [
     {title: 'Рестораны', value: 'restaurants'},
     {title: 'Банк', value: 'bank'},
     {title: 'Магазины', value: 'shopping'}
@@ -34,13 +40,25 @@ export class AddTransactionFormComponent implements OnInit {
   addTransactionForm = this.fb.group({
     amount: 0,
     currency: 'RUB',
-    from: '',
-    fromCategory: '',
+    side: '',
+    sideCategory: '',
     description: '',
     trType: 'outcome'
   });
 
-  onSubmit() {
+  onSubmit(values) {
     console.log(this.addTransactionForm);
+
+    const newTransaction = new Transaction(
+      'dsadsda',
+      Date().toString(),
+      values.amount,
+      values.currency,
+      values.side,
+      values.sideCategory,
+      values.description,
+      values.trType
+    );
+    this.itemService.addItem(newTransaction);
   }
 }

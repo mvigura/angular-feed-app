@@ -3,10 +3,10 @@
     <app-select formControlName="trType" [options]="trTypeOptions"></app-select>
   </app-form-group>
   <app-form-group [label]="getSideLabel(addTransactionForm.value.trType)">
-    <app-input formControlName="from"></app-input>
+    <app-input formControlName="side"></app-input>
   </app-form-group>
   <app-form-group label="Категория">
-    <app-select formControlName="fromCategory" [options]="fromCategoryOptions"></app-select>
+    <app-select formControlName="sideCategory" [options]="sideCategoryOptions"></app-select>
   </app-form-group>
   <div class="add-transaction-form__price-row">
     <div class="add-transaction-form__price-row__amount">

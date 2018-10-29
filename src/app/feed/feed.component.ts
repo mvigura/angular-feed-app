@@ -29,4 +29,8 @@ export class FeedComponent implements OnInit {
   isNews(item: Item) {
     return item instanceof News;
   }
+
+  deleteItem(id: string) {
+    this.itemService.deleteItem(id);
+  }
 }

@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {Transaction} from '../../_classes';
 
 @Component({
@@ -9,6 +9,7 @@ import {Transaction} from '../../_classes';
 export class ItemTransactionComponent implements OnInit {
   @Input() transaction: Transaction;
   @Input() selected: boolean;
+  @Output() deletedTransaction = new EventEmitter<string>();
 
   constructor() {}
 
@@ -48,5 +49,9 @@ export class ItemTransactionComponent implements OnInit {
       default:
         return 'flatten-primary';
     }
+  }
+
+  deleteTransaction(id: string) {
+    this.deletedTransaction.emit(id);
   }
 }
