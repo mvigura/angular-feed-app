@@ -18,7 +18,6 @@ export class InputComponent implements ControlValueAccessor {
   value: string = '';
 
   writeValue(value: any): void {
-    console.log('there', value);
     if (!value) {
       return;
     }

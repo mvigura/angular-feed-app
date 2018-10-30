@@ -9,7 +9,7 @@ import {Transaction} from '../../_classes';
 export class ItemTransactionComponent implements OnInit {
   @Input() transaction: Transaction;
   @Input() selected: boolean;
-  @Output() deletedTransaction = new EventEmitter<string>();
+  @Output() deletedTransaction = new EventEmitter<Transaction>();
 
   constructor() {}
 
@@ -51,7 +51,7 @@ export class ItemTransactionComponent implements OnInit {
     }
   }
 
-  deleteTransaction(id: string) {
-    this.deletedTransaction.emit(id);
+  deleteTransaction(transaction: Transaction) {
+    this.deletedTransaction.emit(transaction);
   }
 }

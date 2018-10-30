@@ -30,7 +30,7 @@ export class FeedComponent implements OnInit {
     return item instanceof News;
   }
 
-  deleteItem(id: string) {
-    this.itemService.deleteItem(id);
+  deleteItem(item: Item) {
+    this.itemService.deleteItem(item);
   }
 }

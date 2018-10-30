@@ -3,7 +3,6 @@ import {Item} from './_classes';
 
 import {TRANSACTIONS, NEWS} from './_mocks';
 import {Observable, of} from 'rxjs';
-import {TouchSequence} from 'selenium-webdriver';
 
 @Injectable({
   providedIn: 'root'
@@ -24,9 +23,10 @@ export class ItemService {
     console.log(this.items);
   }
 
-  deleteItem(itemId: string) {
-    console.log(this.items);
-    this.items = this.items.filter(item => item.id !== itemId);
-    return of(this.items);
+  deleteItem(item: Item) {
+    const index: number = this.items.indexOf(item);
+    if (index !== -1) {
+        this.items.splice(index, 1);
+    }  
   }
 }
