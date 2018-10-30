@@ -47,7 +47,6 @@ export class AddTransactionFormComponent implements OnInit {
   });
 
   onSubmit(values) {
-    console.log(this.addTransactionForm);
 
     const newTransaction = new Transaction(
       'dsadsda',
@@ -60,5 +59,6 @@ export class AddTransactionFormComponent implements OnInit {
       values.trType
     );
     this.itemService.addItem(newTransaction);
+    this.modalService.close('add-event');
   }
 }
