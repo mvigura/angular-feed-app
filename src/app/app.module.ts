@@ -19,6 +19,7 @@ import {AddEventModalComponent} from './modals/add-event-modal/add-event-modal.c
 import {AddTransactionFormComponent} from './forms/add-transaction-form/add-transaction-form.component';
 import {AddNewsFormComponent} from './forms/add-news-form/add-news-form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { NewsDetailedModalComponent } from './modals/news-detailed-modal/news-detailed-modal.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     AddNewsFormComponent,
     InputComponent,
     SelectComponent,
-    FormGroupComponent
+    FormGroupComponent,
+    NewsDetailedModalComponent
   ],
   imports: [BrowserModule, EllipsisModule, FormsModule, ReactiveFormsModule],
   providers: [],

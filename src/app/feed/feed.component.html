@@ -2,6 +2,6 @@
   <ng-container *ngFor="let item of items">
     <app-item-transaction *ngIf="isTransaction(item)" [transaction]="item" [selected]="item.id === selectedItem"
       (click)="selectedItem = item.id" (deletedTransaction)="deleteItem($event)"></app-item-transaction>
-    <app-item-news *ngIf="isNews(item)" [news]="item" [selected]="item.id === selectedItem" (click)="selectedItem = item.id"></app-item-news>
+    <app-item-news *ngIf="isNews(item)" [news]="item" [selected]="item.id === selectedItem"></app-item-news>
   </ng-container>
 </div>

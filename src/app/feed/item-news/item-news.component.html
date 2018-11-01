@@ -1,4 +1,4 @@
-<div class="item-news">
+<div class="item-news" (click)="openDetailsModal()">
   <div class="item-news__pre-header">{{news.date | date:'dd.LL.yy HH:mm'}}</div>
   <div class="item-news__header" snEllipsis>{{news.title}}</div>
 </div>
