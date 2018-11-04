@@ -9,7 +9,8 @@ import {
   ModalComponent,
   InputComponent,
   SelectComponent,
-  FormGroupComponent
+  FormGroupComponent,
+  TextareaComponent
 } from './_components';
 import {ItemNewsComponent} from './feed/item-news/item-news.component';
 import {ItemTransactionComponent} from './feed/item-transaction/item-transaction.component';
@@ -19,7 +20,7 @@ import {AddEventModalComponent} from './modals/add-event-modal/add-event-modal.c
 import {AddTransactionFormComponent} from './forms/add-transaction-form/add-transaction-form.component';
 import {AddNewsFormComponent} from './forms/add-news-form/add-news-form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { NewsDetailedModalComponent } from './modals/news-detailed-modal/news-detailed-modal.component';
+import {NewsDetailedModalComponent} from './modals/news-detailed-modal/news-detailed-modal.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { NewsDetailedModalComponent } from './modals/news-detailed-modal/news-de
     InputComponent,
     SelectComponent,
     FormGroupComponent,
-    NewsDetailedModalComponent
+    NewsDetailedModalComponent,
+    TextareaComponent
   ],
   imports: [BrowserModule, EllipsisModule, FormsModule, ReactiveFormsModule],
   providers: [],

@@ -19,14 +19,12 @@ export class ItemService {
 
   addItem(item: Item) {
     this.items.push(item);
-
-    console.log(this.items);
   }
 
   deleteItem(item: Item) {
     const index: number = this.items.indexOf(item);
     if (index !== -1) {
-        this.items.splice(index, 1);
-    }  
+      this.items.splice(index, 1);
+    }
   }
 }
