@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
+import {News} from 'src/app/_classes';
+import {ModalService} from 'src/app/modal.service';
 
 @Component({
   selector: 'app-news-detailed-modal',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news-detailed-modal.component.less']
 })
 export class NewsDetailedModalComponent implements OnInit {
+  @Input() selectedItem: News = null;
+  constructor(private modalService: ModalService) {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  setViewed(news: News) {
+    news.viewed = true;
+    this.modalService.close('news-detailed');
   }
-
 }

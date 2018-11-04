@@ -1,3 +1,10 @@
-<app-modal id="news-detailed" title="Детали">
-  <h3>ss</h3>
+<app-modal id="news-detailed" [title]="selectedItem && selectedItem.title">
+  <div class="news-detailed" *ngIf="selectedItem">
+    <div class="news-detailed__date">{{selectedItem.date | date:'dd.LL.yy HH:mm'}}</div>
+    <div class="news-detailed__content">{{selectedItem.content}}</div>
+    <div class="news-detailed__content">{{selectedItem.viewed}}</div>
+    <div class="news-detailed__controls">
+      <app-button (click)="selectedItem.viewed = true">Ознакомлен</app-button>
+    </div>
+  </div>
 </app-modal>
