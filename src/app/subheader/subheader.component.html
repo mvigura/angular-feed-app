@@ -1,0 +1,12 @@
+<div class="subheader">
+  <div class="subheader__controls">
+    <div class="subheader__controls__control" (click)="setSort('type')">
+      Тип
+      <app-icon class="subheader__controls__control-icon" [icon]="getSortIcon('type')" [inverse]="true"></app-icon>
+    </div>
+    <div class="subheader__controls__control" (click)="setSort('date')">
+      Дата
+      <app-icon class="subheader__controls__control-icon" [icon]="getSortIcon('date')" [inverse]="true"></app-icon>
+    </div>
+  </div>
+</div>

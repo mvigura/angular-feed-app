@@ -21,6 +21,7 @@ import {AddTransactionFormComponent} from './forms/add-transaction-form/add-tran
 import {AddNewsFormComponent} from './forms/add-news-form/add-news-form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NewsDetailedModalComponent} from './modals/news-detailed-modal/news-detailed-modal.component';
+import { SubheaderComponent } from './subheader/subheader.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {NewsDetailedModalComponent} from './modals/news-detailed-modal/news-deta
     SelectComponent,
     FormGroupComponent,
     NewsDetailedModalComponent,
-    TextareaComponent
+    TextareaComponent,
+    SubheaderComponent
   ],
   imports: [BrowserModule, EllipsisModule, FormsModule, ReactiveFormsModule],
   providers: [],
