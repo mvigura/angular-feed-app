@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {FormBuilder} from '@angular/forms';
 import {Transaction} from '../../_classes';
 import {ModalService} from 'src/app/modal.service';
@@ -9,14 +9,12 @@ import {ItemService} from 'src/app/item.service';
   templateUrl: './add-transaction-form.component.html',
   styleUrls: ['./add-transaction-form.component.less']
 })
-export class AddTransactionFormComponent implements OnInit {
+export class AddTransactionFormComponent {
   constructor(
     private fb: FormBuilder,
     private modalService: ModalService,
     private itemService: ItemService
   ) {}
-
-  ngOnInit() {}
 
   currencyOptions: object[] = [
     {title: 'RUB', value: 'RUB'},
@@ -47,7 +45,6 @@ export class AddTransactionFormComponent implements OnInit {
   });
 
   onSubmit(values) {
-
     const newTransaction = new Transaction(
       'dsadsda',
       Date().toString(),
