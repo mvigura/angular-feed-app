@@ -1,3 +1,9 @@
-<p>
-  add-news-form works!
-</p>
+<form class="add-news-form" [formGroup]="addNewsForm" (ngSubmit)="onSubmit(addNewsForm.value)">
+  <app-form-group label="Заголовок">
+    <app-input formControlName="title"></app-input>
+  </app-form-group>
+  <app-form-group label="Текст">
+    <app-textarea formControlName="content"></app-textarea>
+  </app-form-group>
+  <app-button class="add-news-form__control" type="submit">Добавить событие</app-button>
+</form>
