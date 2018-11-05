@@ -33,4 +33,8 @@ export class FeedComponent implements OnInit {
   deleteItem(item: Item) {
     this.itemService.deleteItem(item);
   }
+
+  selectItem(item: Item) {
+    this.selectedItem = item;
+  }
 }

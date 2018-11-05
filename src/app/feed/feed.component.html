@@ -1,9 +1,8 @@
 <div class="feed">
   <ng-container *ngFor="let item of items">
-    <app-item-transaction *ngIf="isTransaction(item)" [transaction]="item" [selected]="item === selectedItem" (click)="selectedItem = item"
+    <app-item-transaction *ngIf="isTransaction(item)" [transaction]="item" [selected]="item === selectedItem" (click)="selectItem(item)"
       (deletedTransaction)="deleteItem($event)"></app-item-transaction>
-    <app-item-news *ngIf="isNews(item)" [news]="item" [selected]="item === selectedItem" (click)="selectedItem = item"></app-item-news>
+    <app-item-news *ngIf="isNews(item)" [news]="item" (click)="selectItem(item)"></app-item-news>
   </ng-container>
   <app-news-detailed-modal [selectedItem]="selectedItem"></app-news-detailed-modal>
-
 </div>
