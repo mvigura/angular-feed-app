@@ -22,7 +22,7 @@ export class AddNewsFormComponent {
   });
 
   onSubmit(values) {
-    const newNews = new News('dsadsda', Date().toString(), values.title, values.content, false);
+    const newNews = new News(Date().toString(), values.title, values.content, false);
     this.itemService.addItem(newNews);
     this.modalService.close('add-event');
   }

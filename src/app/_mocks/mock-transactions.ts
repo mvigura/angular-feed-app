@@ -8,7 +8,7 @@ const transactions: Transaction[] = [
     side: 'Starcups',
     sideCategory: 'restaurants',
     description: 'Покупка в starcups',
-    date: "2018-10-31T15:47:10.214Z",
+    date: '2018-10-31T15:47:10.214Z',
     trType: 'income'
   },
   {
@@ -18,7 +18,7 @@ const transactions: Transaction[] = [
     side: 'Банк',
     sideCategory: 'bank',
     description: 'Начисление процентов по вкладу',
-    date: "2018-10-31T10:47:10.214Z",
+    date: '2018-10-31T10:47:10.214Z',
     trType: 'outcome'
   },
   {
@@ -28,7 +28,7 @@ const transactions: Transaction[] = [
     side: 'Восьмерочка',
     sideCategory: 'shopping',
     description: 'Покупка в магазине восьмерочка',
-    date: "2018-10-31T15:47:10.214Z",
+    date: '2018-10-31T15:47:10.214Z',
     trType: 'income'
   }
 ];
@@ -36,7 +36,6 @@ const transactions: Transaction[] = [
 export const TRANSACTIONS: Transaction[] = transactions.map(
   tr =>
     new Transaction(
-      tr.id,
       tr.date,
       tr.amount,
       tr.currency,

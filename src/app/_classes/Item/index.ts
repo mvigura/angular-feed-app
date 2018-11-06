@@ -1,8 +1,8 @@
 export class Item {
   id: string;
   date: string;
-  constructor(id: string, date: string) {
-    this.id = id;
+  constructor(date: string) {
+    this.id = `item_${new Date().getTime()}_${String(Math.random()).substr(2, 5)}`;
     this.date = date;
   }
 }

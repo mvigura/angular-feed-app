@@ -8,7 +8,6 @@ export class Transaction extends Item {
   description: string;
   trType: string;
   constructor(
-    id: string,
     date: string,
     amount: number,
     currency: string,
@@ -17,7 +16,7 @@ export class Transaction extends Item {
     description: string,
     trType: string
   ) {
-    super(id, date);
+    super(date);
     this.amount = amount;
     this.currency = currency;
     this.side = side;

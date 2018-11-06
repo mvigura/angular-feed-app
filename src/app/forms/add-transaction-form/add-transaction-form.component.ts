@@ -46,7 +46,6 @@ export class AddTransactionFormComponent {
 
   onSubmit(values) {
     const newTransaction = new Transaction(
-      'dsadsda',
       Date().toString(),
       values.amount,
       values.currency,

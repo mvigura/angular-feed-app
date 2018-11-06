@@ -27,6 +27,4 @@ const news: News[] = [
   }
 ];
 
-export const NEWS: News[] = news.map(
-  ns => new News(ns.id, ns.date, ns.title, ns.content, ns.viewed)
-);
+export const NEWS: News[] = news.map(ns => new News(ns.date, ns.title, ns.content, ns.viewed));
