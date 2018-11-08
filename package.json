@@ -11,6 +11,7 @@
     "preinstall": "npm install -g express @angular/cli @angular/compiler-cli @angular-devkit/build-angular typescript",
     "postinstall": "ng build --prod"
   },
+  "main": "server.js",
   "private": true,
   "dependencies": {
     "@angular/animations": "^7.0.2",
