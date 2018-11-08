@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-add-event-modal',
@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-event-modal.component.less']
 })
 export class AddEventModalComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  eventOptions: object[] = [
+    {title: 'Транзакция', value: 'transaction'},
+    {title: 'Новость', value: 'news'}
+  ];
+
+  setActiveType(type: string) {
+    this.activeEventType = type;
   }
-
+  activeEventType: string = 'transaction';
 }

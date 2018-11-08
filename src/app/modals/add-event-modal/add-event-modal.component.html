@@ -1,3 +1,5 @@
 <app-modal id="add-event" title="Добавить событие">
-  <app-add-transaction-form></app-add-transaction-form>
+  <app-buttongrp [options]="eventOptions" (onClick)="setActiveType($event)"></app-buttongrp>
+  <app-add-transaction-form *ngIf="activeEventType === 'transaction'"></app-add-transaction-form>
+  <app-add-news-form *ngIf="activeEventType === 'news'"></app-add-news-form>
 </app-modal>

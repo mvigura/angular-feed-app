@@ -1,0 +1,11 @@
+<div class="button-grp">
+  <ng-container *ngFor="let option of options">
+    <button
+      class="button-grp__control"
+      [class.button-grp__control--active]="option === activeOption"
+      (click)="setActive(option)"
+    >
+      {{ option.title }}
+    </button>
+  </ng-container>
+</div>

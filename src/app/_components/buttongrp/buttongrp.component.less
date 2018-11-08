@@ -1,0 +1,39 @@
+@import '../../../styles/colors.less';
+@import '../../../styles/variables.less';
+
+.button-grp {
+  display: flex;
+  width: 100%;
+  margin-bottom: @baseOffset3x;
+
+  &__control {
+    width: 100%;
+    padding: @baseOffset2x @baseOffset3x;
+    border: 1px solid @color-primary-2;
+    background-color: @color-primary-0;
+    border-radius: @smallGlobalRadius;
+    color: @color-primary-1;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &:not(:last-child) {
+      border-right: none; /* Prevent double borders */
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &:not(:first-child) {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    &:hover {
+      background-color: @color-complement-2;
+      color: @color-complement-1;
+    }
+
+    &--active {
+      background-color: @color-primary-3;
+    }
+  }
+}

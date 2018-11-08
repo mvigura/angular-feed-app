@@ -1,4 +1,5 @@
 export * from './button/button.component';
+export * from './buttongrp/buttongrp.component';
 export * from './icon/icon.component';
 export * from './modal/modal.component';
 export * from './form/input/input.component';

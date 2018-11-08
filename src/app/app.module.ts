@@ -6,6 +6,7 @@ import {AppComponent} from './app.component';
 import {
   IconComponent,
   ButtonComponent,
+  ButtongrpComponent,
   ModalComponent,
   InputComponent,
   SelectComponent,
@@ -21,7 +22,7 @@ import {AddTransactionFormComponent} from './forms/add-transaction-form/add-tran
 import {AddNewsFormComponent} from './forms/add-news-form/add-news-form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NewsDetailedModalComponent} from './modals/news-detailed-modal/news-detailed-modal.component';
-import { SubheaderComponent } from './subheader/subheader.component';
+import {SubheaderComponent} from './subheader/subheader.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { SubheaderComponent } from './subheader/subheader.component';
     FormGroupComponent,
     NewsDetailedModalComponent,
     TextareaComponent,
-    SubheaderComponent
+    SubheaderComponent,
+    ButtongrpComponent
   ],
   imports: [BrowserModule, EllipsisModule, FormsModule, ReactiveFormsModule],
   providers: [],
