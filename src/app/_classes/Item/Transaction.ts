@@ -16,7 +16,7 @@ export class Transaction extends Item {
     description: string,
     trType: string
   ) {
-    super(date);
+    super(date, 2);
     this.amount = amount;
     this.currency = currency;
     this.side = side;

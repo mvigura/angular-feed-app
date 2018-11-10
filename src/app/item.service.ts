@@ -36,17 +36,11 @@ export class ItemService {
   sortByType() {
     const sortDirection = this.sortSettings.type;
     this.items.sort((item_1: Item, item_2: Item) => {
-      const prot_1 = Object.getPrototypeOf(item_1).constructor.name;
-      const prot_2 = Object.getPrototypeOf(item_2).constructor.name;
+      if (item_1.typeSortIndex === item_2.typeSortIndex) return 0;
 
-      if (sortDirection === 'asc') {
-        if (prot_1 < prot_2) return -1;
-        if (prot_1 > prot_2) return 1;
-      } else {
-        if (prot_1 > prot_2) return -1;
-        if (prot_1 < prot_2) return 1;
-      }
-      return 0;
+      const result = item_1.typeSortIndex > item_2.typeSortIndex ? 1 : -1;
+
+      return sortDirection === 'asc' ? result * -1 : result;
     });
   }
 
@@ -68,7 +62,4 @@ export class ItemService {
       this.sortByDate();
     }
   }
-  // sortItems(sortSettings: {type: string; date: string}) {
-  //   this.items.sort(this.sortByDate(sortSettings.date));
-  // }
 }

@@ -5,7 +5,7 @@ export class News extends Item {
   content: string;
   viewed: boolean;
   constructor(date: string, title: string, content: string, viewed: boolean) {
-    super(date);
+    super(date, 1);
     this.title = title;
     this.content = content;
     this.viewed = viewed;

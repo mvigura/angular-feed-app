@@ -1,8 +1,7 @@
 import {Transaction} from '../_classes';
 
-const transactions: Transaction[] = [
+const transactions = [
   {
-    id: 'transaction_1',
     amount: 139.99,
     currency: 'USD',
     side: 'Starcups',
@@ -12,7 +11,6 @@ const transactions: Transaction[] = [
     trType: 'income'
   },
   {
-    id: 'transaction_2',
     amount: 134.44,
     currency: 'RUB',
     side: 'Банк',
@@ -22,7 +20,6 @@ const transactions: Transaction[] = [
     trType: 'outcome'
   },
   {
-    id: 'transaction_3',
     amount: 273.67,
     currency: 'RUB',
     side: 'Восьмерочка',
