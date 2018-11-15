@@ -6,8 +6,12 @@ import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
   styleUrls: ['./button.component.less']
 })
 export class ButtonComponent implements OnInit {
-  @Input() appearance: string = 'primary';
-  @Output() onClick = new EventEmitter<void>();
+  @Input()
+  appearance: string = 'primary';
+  @Input()
+  isDisabled: boolean = false;
+  @Output()
+  onClick = new EventEmitter<void>();
 
   constructor() {}
 
