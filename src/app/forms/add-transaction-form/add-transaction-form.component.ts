@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {FormBuilder} from '@angular/forms';
+import {FormBuilder, Validators} from '@angular/forms';
 import {Transaction} from '../../_classes';
 import {ModalService} from 'src/app/modal.service';
 import {ItemService} from 'src/app/item.service';
@@ -36,9 +36,9 @@ export class AddTransactionFormComponent {
   getSideLabel = (trType: string) => (trType === 'outcome' ? 'Получатель' : 'Отправитель');
 
   addTransactionForm = this.fb.group({
-    amount: 0,
+    amount: [0, Validators.required],
     currency: 'RUB',
-    side: '',
+    side: ['', Validators.required],
     sideCategory: '',
     description: '',
     trType: 'outcome'
@@ -56,5 +56,6 @@ export class AddTransactionFormComponent {
     );
     this.itemService.addItem(newTransaction);
     this.modalService.close('add-event');
+    this.addTransactionForm.reset();
   }
 }

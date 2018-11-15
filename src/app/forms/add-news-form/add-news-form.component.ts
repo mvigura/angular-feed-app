@@ -25,5 +25,6 @@ export class AddNewsFormComponent {
     const newNews = new News(Date().toString(), values.title, values.content, false);
     this.itemService.addItem(newNews);
     this.modalService.close('add-event');
+    this.addNewsForm.reset();
   }
 }
