@@ -14,13 +14,11 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
   ]
 })
 export class InputComponent implements ControlValueAccessor {
-  @Input() type: string = 'text';
+  @Input()
+  type: string = 'text';
   value: string = '';
 
   writeValue(value: any): void {
-    if (!value) {
-      return;
-    }
     this.value = value;
     this.onChange(value);
   }
