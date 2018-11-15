@@ -3,6 +3,7 @@
 
 .news-detailed {
   display: flex;
+  min-width: 400px;
   flex-direction: column;
 
   &__date {
@@ -10,6 +11,9 @@
   }
 
   &__content {
+    overflow: auto;
+    min-height: 100px;
+    max-height: 500px;
     margin-bottom: @baseOffset3x;
   }
 
