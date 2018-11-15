@@ -1,9 +1,13 @@
 <app-modal id="news-detailed" [title]="selectedItem && selectedItem.title">
   <div class="news-detailed" *ngIf="selectedItem">
-    <div class="news-detailed__date">{{selectedItem.date | date:'dd.LL.yy HH:mm'}}</div>
-    <div class="news-detailed__content">{{selectedItem.content}}</div>
+    <div class="news-detailed__date">{{ selectedItem.date | date: 'dd.LL.yy HH:mm' }}</div>
+    <div class="news-detailed__content">{{ selectedItem.content }}</div>
     <div class="news-detailed__controls">
-      <app-button (click)="setViewed(selectedItem)">Ознакомлен</app-button>
+      <app-button
+        (click)="setViewed(selectedItem)"
+        [appearance]="selectedItem.viewed ? 'primary' : 'secondary-2'"
+        >{{ selectedItem.viewed ? 'Закрыть' : 'Ознакомлен' }}</app-button
+      >
     </div>
   </div>
 </app-modal>
