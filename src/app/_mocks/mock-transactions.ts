@@ -8,7 +8,7 @@ const transactions = [
     sideCategory: 'restaurants',
     description: 'Покупка в starcups',
     date: '2018-10-31T15:47:10.214Z',
-    trType: 'income'
+    trType: 'outcome'
   },
   {
     amount: 134.44,
@@ -17,7 +17,7 @@ const transactions = [
     sideCategory: 'bank',
     description: 'Начисление процентов по вкладу',
     date: '2018-10-31T10:47:10.214Z',
-    trType: 'outcome'
+    trType: 'income'
   },
   {
     amount: 273.67,
@@ -26,7 +26,7 @@ const transactions = [
     sideCategory: 'shopping',
     description: 'Покупка в магазине восьмерочка',
     date: '2018-10-31T15:47:10.214Z',
-    trType: 'income'
+    trType: 'outcome'
   }
 ];
 

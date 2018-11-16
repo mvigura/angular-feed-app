@@ -7,9 +7,12 @@ import {Transaction} from '../../_classes';
   styleUrls: ['./item-transaction.component.less']
 })
 export class ItemTransactionComponent implements OnInit {
-  @Input() transaction: Transaction;
-  @Input() selected: boolean;
-  @Output() deletedTransaction = new EventEmitter<Transaction>();
+  @Input()
+  transaction: Transaction;
+  @Input()
+  selected: boolean;
+  @Output()
+  deletedTransaction = new EventEmitter<Transaction>();
 
   constructor() {}
 
@@ -42,9 +45,9 @@ export class ItemTransactionComponent implements OnInit {
   }
   getButtonType(trType: string) {
     switch (trType) {
-      case 'income':
-        return 'flatten-primary';
       case 'outcome':
+        return 'flatten-primary';
+      case 'income':
         return 'flatten-secondary-2';
       default:
         return 'flatten-primary';

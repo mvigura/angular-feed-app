@@ -1,23 +1,36 @@
 <div class="item-transaction">
-  <div class="item-transaction-head" [class.item-transaction-head--outcome]="transaction.trType === 'outcome'">
-    <app-icon [icon]="getIcon(transaction.sideCategory)" class="item-transaction-head__icon"></app-icon>
-    <div class="item-transaction-head__desc">{{transaction.side}}</div>
+  <div
+    class="item-transaction-head"
+    [class.item-transaction-head--income]="transaction.trType === 'income'"
+  >
+    <app-icon
+      [icon]="getIcon(transaction.sideCategory)"
+      class="item-transaction-head__icon"
+    ></app-icon>
+    <div class="item-transaction-head__desc">{{ transaction.side }}</div>
     <div class="item-transaction-head__side-info">
-      <div class="item-transaction-head__date">
-        {{transaction.date | date:'dd.LL HH:mm'}}
-      </div>
+      <div class="item-transaction-head__date">{{ transaction.date | date: 'dd.LL HH:mm' }}</div>
       <div class="item-transaction-head__amount">
-        {{transaction.trType === 'outcome' ? '+' : ''}}
-        {{transaction.amount}}
-        <app-icon [icon]="getCurrency(transaction.currency)" class="item-transaction-head__currency-icon"></app-icon>
+        {{ transaction.trType === 'income' ? '+' : '' }} {{ transaction.amount }}
+        <app-icon
+          [icon]="getCurrency(transaction.currency)"
+          class="item-transaction-head__currency-icon"
+        ></app-icon>
       </div>
     </div>
   </div>
-  <div class="item-transaction-content" [class.item-transaction-content--outcome]="transaction.trType === 'outcome'"
-    *ngIf="selected">
-    <div class="item-transaction-content__desc">{{transaction.description}}</div>
+  <div
+    class="item-transaction-content"
+    [class.item-transaction-content--income]="transaction.trType === 'income'"
+    *ngIf="selected"
+  >
+    <div class="item-transaction-content__desc">{{ transaction.description }}</div>
     <div class="item-transaction-content__controls-right">
-      <app-button [appearance]="getButtonType(transaction.trType)" (onClick)="deleteTransaction(transaction)">Удалить</app-button>
+      <app-button
+        [appearance]="getButtonType(transaction.trType)"
+        (onClick)="deleteTransaction(transaction)"
+        >Удалить</app-button
+      >
     </div>
   </div>
 </div>
