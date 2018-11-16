@@ -27,6 +27,15 @@ const transactions = [
     description: 'Покупка в магазине восьмерочка',
     date: '2018-10-31T15:47:10.214Z',
     trType: 'outcome'
+  },
+  {
+    amount: 5000,
+    currency: 'RUB',
+    side: 'Банк',
+    sideCategory: 'bank',
+    description: 'Выплата по кредиту',
+    date: '2018-11-15T10:47:10.214Z',
+    trType: 'outcome'
   }
 ];
 
